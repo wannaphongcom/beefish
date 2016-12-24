@@ -1,7 +1,7 @@
 jellyfish
 =======
 
-Easy file encryption using pycrypto
+Easy file encryption using pycryptodome
 
 forked from coleifer/beefish https://github.com/coleifer/beefish
 
@@ -13,7 +13,7 @@ installing
 
 ::
 
-    pip install beefish pycrypto
+    pip install beefish pycryptodome
 
 Alternatively::
 
