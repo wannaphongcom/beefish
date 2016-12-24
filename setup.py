@@ -6,13 +6,13 @@ readme = f.read()
 f.close()
 
 setup(
-    name='beefish',
-    version="0.1.2",
-    description='simple file encryption using pycrypto',
+    name='jellyfish',
+    version="0.1.3",
+    description='simple file encryption using pycryptodome',
     long_description=readme,
-    author='Charles Leifer',
-    author_email='coleifer@gmail.com',
-    url='http://github.com/coleifer/beefish/',
+    author='Wannaphong',
+    author_email='wannaphong@yahoo.com',
+    url='http://github.com/wannaphongcom/jellyfish/',
     py_modules=['beefish'],
     install_requires=['pycryptodome','six'],
     classifiers=[
@@ -21,6 +21,7 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
+        'Programming Language :: Python 3',
     ],
     scripts = ['beefish.py'],
 )
