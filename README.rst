@@ -1,7 +1,9 @@
-beefish
+jellyfish
 =======
 
 Easy file encryption using pycrypto
+
+forked from coleifer/beefish https://github.com/coleifer/beefish
 
 .. image:: http://media.charlesleifer.com/blog/photos/beefish.jpg
 
@@ -15,7 +17,7 @@ installing
 
 Alternatively::
 
-    pip install -e git+git://github.com/coleifer/beefish.git#egg=beefish
+    pip install -e git+git://github.com/wannaphongcom/jellyfish.git#egg=beefish
 
 Dependencies:
 
@@ -25,9 +27,9 @@ Dependencies:
 usage
 -----
 
-beefish can be used to encrypt and decrypt file-like objects::
+jellyfish can be used to encrypt and decrypt file-like objects::
 
-    from beefish import encrypt, decrypt
+    from jellyfish import encrypt, decrypt
 
     # encrypting
     with open('secrets.txt') as fh:
@@ -50,5 +52,5 @@ you can use a shortcut if you like::
 
 you can use it from the command-line::
 
-    beefish.py -e secrets.txt secrets.enc
-    beefish.py -d secrets.enc secrets.dec
+    jellyfish.py -e secrets.txt secrets.enc
+    jellyfish.py -d secrets.enc secrets.dec
