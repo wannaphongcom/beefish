@@ -13,7 +13,7 @@ installing
 
 ::
 
-    pip install beefish pycryptodome
+    pip install pycryptodome
 
 Alternatively::
 
