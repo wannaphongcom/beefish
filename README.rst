@@ -5,8 +5,7 @@ Easy file encryption using pycryptodome
 
 forked from coleifer/beefish https://github.com/coleifer/beefish
 
-.. image:: http://media.charlesleifer.com/blog/photos/beefish.jpg
-
+.. image:: https://i.imgur.com/RT38mUS.jpg
 
 installing
 ----------
