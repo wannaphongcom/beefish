@@ -115,7 +115,7 @@ class TestEncryptDecrypt(unittest.TestCase):
                 os.unlink(fn)
 
     def write_bytes(self, num, ch='a'):
-		buf = ch * num
+		buf = (ch*num)
 		with open(self.in_filename, 'wb') as fh:
 			if PY3:
 				fh.write(buf.encode('utf-8'))
