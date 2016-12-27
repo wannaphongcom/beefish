@@ -15,7 +15,7 @@ setup(
     url='http://github.com/wannaphongcom/jellyfish/',
     py_modules=['beefish'],
     zip_safe=False,
-    test_suite = 'tests',
+    test_suite='jellyfish',
     install_requires=['pycryptodome','six'],
     classifiers=[
         'Development Status :: 5 - Production/Stable',
