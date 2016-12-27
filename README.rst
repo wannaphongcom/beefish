@@ -1,6 +1,8 @@
 jellyfish
 =======
 
+.. image:: https://travis-ci.org/wannaphongcom/jellyfish.svg?branch=master
+
 Easy file encryption using pycryptodome
 
 forked from coleifer/beefish https://github.com/coleifer/beefish

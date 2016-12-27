@@ -74,4 +74,4 @@ class TestEncryptDecrypt(unittest.TestCase):
                 out_buf.seek(0)
                 decrypt(out_buf, dec_buf, self.key, i)
                 self.assertEqual(in_buf.getvalue(), dec_buf.getvalue())
-unittest.main(argv=sys.argv[:1], verbosity=not options.quiet and 2 or 0)
+unittest.main()
