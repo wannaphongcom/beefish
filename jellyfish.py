@@ -42,7 +42,7 @@ def generate_iv(block_size):
 def get_cipher(key, iv):
     return Blowfish.new(key, Blowfish.MODE_CBC, iv)
 
-def encrypt(in_buf, out_buf, key, chunk_size=4096):
+def encrypt(in_buf, out_buf, key.encode('utf-8'), chunk_size=4096):
     iv = generate_iv(Blowfish.block_size)
     cipher = get_cipher(key, iv)
     bytes_read = 0
@@ -64,7 +64,7 @@ def encrypt(in_buf, out_buf, key, chunk_size=4096):
                 out_buf.write(cipher.encrypt(_gen_padding(bytes_read, cipher.block_size)))
             break
 
-def decrypt(in_buf, out_buf, key, chunk_size=4096):
+def decrypt(in_buf, out_buf, key.encode('utf-8'), chunk_size=4096):
     iv = in_buf.read(Blowfish.block_size)
 
     cipher = get_cipher(key, iv)
@@ -83,12 +83,12 @@ def decrypt(in_buf, out_buf, key, chunk_size=4096):
         out_buf.seek(-padding, 2)
         out_buf.truncate()
 
-def encrypt_file(in_file, out_file, key, chunk_size=4096):
+def encrypt_file(in_file, out_file, key.encode('utf-8'), chunk_size=4096):
     with open(in_file, 'rb') as in_fh:
         with open(out_file, 'wb') as out_fh:
             encrypt(in_fh, out_fh, key, chunk_size)
 
-def decrypt_file(in_file, out_file, key, chunk_size=4096):
+def decrypt_file(in_file, out_file, key.encode('utf-8'), chunk_size=4096):
     with open(in_file, 'rb') as in_fh:
         with open(out_file, 'wb') as out_fh:
             decrypt(in_fh, out_fh, key, chunk_size)
