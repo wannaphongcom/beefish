@@ -37,7 +37,7 @@ def _read_padding(buffer, block_size):
 		return (ord(buffer[-1]) % block_size) or block_size
 
 def generate_iv(block_size):
-    return Random.get_random_bytes(block_size)
+	return Random.get_random_bytes(block_size)
 
 def get_cipher(key, iv):
 	if PY3:
@@ -49,7 +49,6 @@ def encrypt(in_buf, out_buf, key, chunk_size=4096):
     cipher = get_cipher(key, iv)
     bytes_read = 0
     wrote_padding = False
-
     out_buf.write(iv)
 
     while 1:
