@@ -115,13 +115,12 @@ class TestEncryptDecrypt(unittest.TestCase):
                 os.unlink(fn)
 
     def write_bytes(self, num, ch='a'):
-		buf = (ch*num)
 		with open(self.in_filename, 'wb') as fh:
 			if PY3:
-				fh.write(buf.encode('utf-8'))
+				fh.write((ch*num).encode('utf-8'))
 			else:
-				fh.write(buf)
-		return buf
+				fh.write((ch*num))
+		return (ch*num)
 
     def crypt_data(self, num_bytes, ch, in_key=None, out_key=None, chunk_size=4096):
         in_key = in_key or self.key
