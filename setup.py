@@ -10,7 +10,7 @@ setup(
     version="0.1.3",
     description='simple file encryption using pycryptodome',
     long_description=readme,
-    author='Wannaphong',
+    author='Wannaphong Phatthiyaphaibun',
     author_email='wannaphong@yahoo.com',
     url='http://github.com/wannaphongcom/jellyfish/',
     py_modules=['beefish'],
