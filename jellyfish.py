@@ -118,9 +118,9 @@ class TestEncryptDecrypt(unittest.TestCase):
 		if PY3:
 			ch = ch.encode('utf-8')
 		buf = ch * num
-        with open(self.in_filename, 'wb') as fh:
-            fh.write(buf)
-        return buf
+		with open(self.in_filename, 'wb') as fh:
+			fh.write(buf)
+		return buf
 
     def crypt_data(self, num_bytes, ch, in_key=None, out_key=None, chunk_size=4096):
         in_key = in_key or self.key
