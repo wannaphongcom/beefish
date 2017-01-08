@@ -3,12 +3,11 @@
 
 language: python
 python: 3.5
-
-env:
-  - TOXENV=py27
-  - TOXENV=py35
-  - TOXENV=py34
-  - TOXENV=py33
+python:
+  - "2.7"
+  - "3.4"
+  - "3.5"
+  - "3.6"
 # command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
 install: pip install -U tox
 
@@ -26,4 +25,4 @@ deploy:
   on:
     tags: true
     repo: wannaphongcom/jellyfish
-    condition: $TOXENV == py27
+    #condition: $TOXENV == py27
