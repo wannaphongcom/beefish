@@ -53,7 +53,7 @@ def encrypt(in_buf, out_buf, key, chunk_size=4096):
 		print_(iv)
 		out_buf.write(iv)
     else:
-		print_(iv)
+        print_(iv)
         out_buf.write(iv)
 
     while 1:
