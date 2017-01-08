@@ -49,7 +49,12 @@ def encrypt(in_buf, out_buf, key, chunk_size=4096):
     cipher = get_cipher(key, iv)
     bytes_read = 0
     wrote_padding = False
-    out_buf.write(iv)
+    if PY3:
+		print_(iv)
+		out_buf.write(iv)
+    else:
+		print_(iv)
+        out_buf.write(iv)
 
     while 1:
         buffer = in_buf.read(chunk_size)
